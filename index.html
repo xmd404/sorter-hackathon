@@ -9,9 +9,46 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <div class="rocket"></div>
+    <div class="choices">
+        <div class="item" id="games-choice" draggable="true">Games</div>
+        <div class="item" id="books-choice" draggable="true">Books</div>
+        <div class="item" id="music-choice" draggable="true">Music</div>
+        <div class="item" id="movies-choice" draggable="true">Movies</div>
+        <div class="item"  id="social-choice" draggable="true">Social Media</div>
+    </div>
     <div class="friends-modal"></div>
+    <!-- Item Select -->
+    <fieldset>
+        <legend>NoahsArk3000</legend>
+        <div>
+            <input type="checkbox" id="games" name="feature" value="games" checked />
+            <label for="games">Games</label>
+        </div>
+        <div>
+            <input type="checkbox" id="books" name="feature" value="books" />
+            <label for="books">Books</label>
+        </div>
+        <div>
+            <input type="checkbox" id="music" name="feature" value="music" />
+            <label for="music">Music</label>
+        </div>
+        <div>
+            <input type="checkbox" id="movies" name="feature" value="movies" />
+            <label for="movies">Movies</label>
+        </div>
+        <div>
+            <input type="checkbox" id="social" name="feature" value="social" />
+            <label for="social">Social Media</label>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </fieldset>
     <!-- Scripts -->
-    <script src="scripts/friends.js"></script>
+
+    <script src="scripts/howler.min.js"></script>
+    <script src="scripts/dragdrop.js"></script>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/friends.js"></script>
 </body>
 </html>

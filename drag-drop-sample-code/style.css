@@ -1,0 +1,14 @@
+.drag {
+  width: 10em;
+  height: 10em;
+  text-align: center;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.drop {
+  width: 20em;
+  height: 20em;
+  text-align: center;
+  border: 1px solid black;
+}

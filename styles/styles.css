@@ -1,3 +1,18 @@
+.item {
+  width: 10em;
+  height: 2em;
+  text-align: center;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.rocket, .choices {
+  width: 20em;
+  height: 20em;
+  text-align: center;
+  border: 1px solid black;
+}
+
 .friend {
   display: flex;
   justify-content: center;
