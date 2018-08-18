@@ -1,0 +1,97 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: rgb(16,44,166);
+    background: radial-gradient(circle, rgba(16,44,166,1) 0%, rgba(77,5,119,1) 100%);
+}
+
+.mainColumnFlex {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 2em;
+    background-color: rgba(245, 245, 245, 0.404);
+}
+
+.firstRowFlex {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.columnFlex {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+.rocketIMG {
+    height: 15em;
+    flex-basis: 100%;
+}
+.robotIMG {
+    height: 15em;
+}
+
+.textBubbleIMG {
+    height: 10em;
+    width: 100%;
+}
+
+.textbubble {
+    height: 10em;
+    position: relative;
+    text-align: center;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icons {
+    height: 2em;
+    margin: .5em;
+    background-color: rgba(255, 255, 255, 0.692);
+    padding: .5em;
+    border-radius: .5em;
+}
+
+@media screen and (min-width: 768px) {
+    .columnFlex {
+        flex-basis: 50%;
+    }
+    .rocketIMG {
+        flex-basis: 50%;
+        height: 18em;
+    }
+    .icons {
+        height: 3em;
+    }
+    .mainColumnFlex {
+        margin: 3em;
+        padding: 4em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .columnFlex {
+        flex-basis: 25%;
+    }
+    .rocketIMG {
+        flex-basis: 25%;
+        height: 20em;
+    }
+    .icons {
+        height: 4em;
+    }
+    .mainColumnFlex {
+        margin: 5em;
+        padding: 5em;
+    }
+}
