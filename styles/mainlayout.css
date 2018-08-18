@@ -10,7 +10,8 @@ body {
 .mainColumnFlex {
     display: flex;
     flex-direction: column;
-    margin: 5em;
+    margin: 1em;
+    padding: 2em;
     border-radius: 2em;
     background-color: rgba(245, 245, 245, 0.404);
 }
@@ -19,15 +20,18 @@ body {
     display: flex;
     align-items:center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .columnFlex {
     display: flex;
     flex-direction: column;
+    flex-basis: 100%;
 }
 
 .rocketIMG {
-    height: 20em;
+    height: 15em;
+    flex-basis: 100%;
 }
 .robotIMG {
     height: 15em;
@@ -51,6 +55,43 @@ body {
 }
 
 .icons {
-    height: 4em;
-    margin: 1.5em;
+    height: 2em;
+    margin: .5em;
+    background-color: rgba(255, 255, 255, 0.692);
+    padding: .5em;
+    border-radius: .5em;
+}
+
+@media screen and (min-width: 768px) {
+    .columnFlex {
+        flex-basis: 50%;
+    }
+    .rocketIMG {
+        flex-basis: 50%;
+        height: 18em;
+    }
+    .icons {
+        height: 3em;
+    }
+    .mainColumnFlex {
+        margin: 3em;
+        padding: 4em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .columnFlex {
+        flex-basis: 25%;
+    }
+    .rocketIMG {
+        flex-basis: 25%;
+        height: 20em;
+    }
+    .icons {
+        height: 4em;
+    }
+    .mainColumnFlex {
+        margin: 5em;
+        padding: 5em;
+    }
 }
