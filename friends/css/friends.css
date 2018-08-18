@@ -1,0 +1,9 @@
+.friend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.friend-text {
+  padding: 1em;
+}
