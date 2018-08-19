@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/mainlayout.css">
 </head>
 <body>
-    <div class="mainColumnFlex">
+    <div class="start-screen mainColumnFlex">
         <img src="images/sorterAI.png">
         <div class="firstRowFlex">
             <div class="columnFlex">
@@ -20,6 +20,7 @@
                 <img class="robotIMG" src="images/robotOriginal.png">
             </div>
             <img class="rocketIMG" src="images/spaceship.png">
+            <button class="start-button">Start</button>
         </div>
         <div class="firstRowFlex">
             <img class="icons" src="images/gamesIcon.png">
@@ -30,18 +31,20 @@
         </div>
         <img src="images/sponsors.png">
     </div>
-    <div class="rocket"></div>
-    <div class="choices">
-        <div class="item" id="games-choice" draggable="true">Games</div>
-        <div class="item" id="books-choice" draggable="true">Books</div>
-        <div class="item" id="music-choice" draggable="true">Music</div>
-        <div class="item" id="movies-choice" draggable="true">Movies</div>
-        <div class="item"  id="social-choice" draggable="true">Social Media</div>
+    <div class="game-screen hide">
+        <div class="rocket"></div>
+        <div class="choices">
+            <div class="item" id="games-choice" draggable="true">Games</div>
+            <div class="item" id="books-choice" draggable="true">Books</div>
+            <div class="item" id="music-choice" draggable="true">Music</div>
+            <div class="item" id="movies-choice" draggable="true">Movies</div>
+            <div class="item"  id="social-choice" draggable="true">Social Media</div>
+        </div>
     </div>
 
-    <div class="friends-modal"></div>
+    <div class="friends-modal hide"></div>
     <!-- Item Select -->
-    <fieldset>
+    <fieldset class="hide">
         <legend>NoahsArk3000</legend>
         <div>
             <input type="checkbox" id="games" name="feature" value="games" checked />

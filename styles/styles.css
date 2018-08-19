@@ -1,9 +1,25 @@
+:root {
+  --light-background: rgba(245, 245, 245, 0.404);
+}
+
 .item {
   width: 10em;
   height: 2em;
   text-align: center;
   border: 1px solid black;
   display: inline-block;
+}
+
+.game-screen {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  padding: 2em;
+  border-radius: 2em;
+  box-sizing: border-box;
+  background: var(--light-background);
 }
 
 .rocket, .choices {
@@ -21,4 +37,9 @@
 }
 .friend-text {
   padding: 1em;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
 }
