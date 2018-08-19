@@ -2,7 +2,7 @@ let items = document.querySelectorAll('.item');
 for (let item of items){
   item.ondragstart = event => {
     console.log('selected ' + event.target.id);
-    event.dataTransfer.setData("dragElement", event.target.id);
+    event.dataTransfer.setData("dragElement", event.currentTarget.id);
     event.effectAllowed = "copyMove";
   }
 }
@@ -11,14 +11,14 @@ let rocketDropHandler = event => {
   console.log('dropped in rocket');
   let dragId = event.dataTransfer.getData("dragElement");
   let dragElement = document.querySelector('#' + dragId);
-  event.target.appendChild(dragElement);
+  event.currentTarget.appendChild(dragElement);
 }
 // choices drop handler
 let choicesDropHandler = event => {
   console.log('dropped in choices');
   let dragId = event.dataTransfer.getData("dragElement");
   let dragElement = document.querySelector('#' + dragId);
-  event.target.appendChild(dragElement);
+  event.currentTarget.appendChild(dragElement);
 }
 let dragOff = event => {
   event.preventDefault();
