@@ -1,7 +1,7 @@
 let items = document.querySelectorAll('.item');
 for (let item of items){
   item.ondragstart = event => {
-    console.log(event.target.id);
+    console.log('selected ' + event.target.id);
     event.dataTransfer.setData("dragElement", event.target.id);
     event.effectAllowed = "copyMove";
   }
@@ -26,6 +26,6 @@ let dragOff = event => {
 let rocket = document.querySelector('.rocket');
 let choices = document.querySelector('.choices');
 rocket.ondrop = rocketDropHandler;
-choices.ondrop = rocketDropHandler;
+choices.ondrop = choicesDropHandler;
 rocket.ondragover = dragOff;
 choices.ondragover = dragOff;
