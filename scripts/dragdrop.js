@@ -1,3 +1,4 @@
+let currentChoice = '';
 let items = document.querySelectorAll('.item');
 for (let item of items){
   item.ondragstart = event => {
@@ -12,6 +13,14 @@ let rocketDropHandler = event => {
   let dragId = event.dataTransfer.getData("dragElement");
   let dragElement = document.querySelector('#' + dragId);
   event.currentTarget.appendChild(dragElement);
+  let choice = dragId.replace('-choice', '');
+  data[choice] = true;
+  currentChoice = choice;
+  console.log(data);
+  let commentInput = document.querySelector('.comment-input');
+  commentInput.value = data[currentChoice + '_reason'];
+  let commentElement = document.querySelector('.comment');
+  commentElement.classList.remove('hide');
 }
 // choices drop handler
 let choicesDropHandler = event => {
@@ -19,6 +28,8 @@ let choicesDropHandler = event => {
   let dragId = event.dataTransfer.getData("dragElement");
   let dragElement = document.querySelector('#' + dragId);
   event.currentTarget.appendChild(dragElement);
+  let choice = dragId.replace('-choice', '');
+  data[choice] = false;
 }
 let dragOff = event => {
   event.preventDefault();
