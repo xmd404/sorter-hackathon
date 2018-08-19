@@ -12,7 +12,7 @@ let rocketDropHandler = event => {
   console.log('dropped in rocket');
   let dragId = event.dataTransfer.getData("dragElement");
   let dragElement = document.querySelector('#' + dragId);
-  event.target.appendChild(dragElement);
+  event.currentTarget.appendChild(dragElement);
   let choice = dragId.replace('-choice', '');
   data[choice] = true;
   currentChoice = choice;
