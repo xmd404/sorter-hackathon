@@ -1,12 +1,12 @@
 let data = {
   games: false,
-  games_reason: false,
+  games_reason: '',
   books: false,
-  books_reason: false,
+  books_reason: '',
   music: false,
-  music_reason: false,
+  music_reason: '',
   movies: false,
-  movies_reason: false,
+  movies_reason: '',
   social: false,
-  social_reason: false
+  social_reason: ''
 }
