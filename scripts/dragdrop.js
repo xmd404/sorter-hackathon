@@ -6,20 +6,23 @@ for (let item of items){
     event.effectAllowed = "copyMove";
   }
 }
-
-let dropHandler = event => {
-  console.log('dropped.');
+// rocket drop handler
+let rocketDropHandler = event => {
+  console.log('dropped in rocket');
   let dragId = event.dataTransfer.getData("dragElement");
   let dragElement = document.querySelector('#' + dragId);
   event.target.appendChild(dragElement);
 }
+// choices drop handler
+let choicesDropHandler = event => {
+  console.log('dropped in choices');
+}
 let dragOff = event => {
   event.preventDefault();
 }
-
 let rocket = document.querySelector('.rocket');
 let choices = document.querySelector('.choices');
-rocket.ondrop = dropHandler;
-choices.ondrop = dropHandler;
+rocket.ondrop = rocketDropHandler;
+choices.ondrop = rocketDropHandler;
 rocket.ondragover = dragOff;
 choices.ondragover = dragOff;
