@@ -12,6 +12,14 @@ let rocketDropHandler = event => {
   let dragId = event.dataTransfer.getData("dragElement");
   let dragElement = document.querySelector('#' + dragId);
   event.target.appendChild(dragElement);
+  let rocketElementItems = document.querySelectorAll('.rocket .items');
+  let numRocketItems = rocketElementItems.length;
+  if (numRocketItems >= 3) {
+    let choiceElementItems = document.querySelectorAll('.choice .items')
+    for (let choice in choiceElementItems) {
+      choice.setAttribute('draggable', 'false');
+    }
+  }
 }
 // choices drop handler
 let choicesDropHandler = event => {
