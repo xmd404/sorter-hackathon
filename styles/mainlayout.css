@@ -57,28 +57,35 @@ body {
 }
 
 .firstPrompt {
-    animation: fadeaway 2s linear
+    animation-delay: 0s;
+    animation: fadeaway 20s linear infinite;
 }
 .secondPrompt {
-    animation: fadeaway 5s linear
+    animation: fadeaway 20s 4s linear infinite;
 }
 .thirdPrompt {
-    animation: fadeaway 10s linear
+    animation: fadeaway 20s 8s linear infinite;
 }
 .fourthPrompt {
-    animation: fadeaway 15s linear
+    animation: fadeaway 20s 12s linear infinite;
 }
 .fifthPrompt {
-    animation: fadeaway 20s linear
+    animation: fadeaway 20s 16s linear infinite;
 }
 
 
 @keyframes fadeaway {
     0% {
+        opacity: 1;
+    }
+    15% {
+        opacity: 1;
+    }
+    20% {
         opacity: 0;
     }
-    100% {
-        opacity: 1;
+    95% {
+        opacity: 0;
     }
 }
 
