@@ -2,7 +2,7 @@ let currentChoice = '';
 let items = document.querySelectorAll('.item');
 for (let item of items){
   item.ondragstart = event => {
-    console.log(event.target.id);
+    console.log('selected ' + event.target.id);
     event.dataTransfer.setData("dragElement", event.currentTarget.id);
     event.effectAllowed = "copyMove";
   }
