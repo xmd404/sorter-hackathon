@@ -89,6 +89,21 @@ body {
     padding: .5em;
     border-radius: .5em;
 }
+.start-button {
+    padding: 0.5em 1em;
+    margin: 1em;
+    font-size: 2rem;
+    outline: none;
+    border: 0.1em black solid;
+    cursor: pointer;
+}
+.start-button:hover {
+    color: white;
+    background: black;
+}
+.start-screen {
+    transition: opacity 300ms;
+}
 
 @media screen and (min-width: 768px) {
     .columnFlex {
