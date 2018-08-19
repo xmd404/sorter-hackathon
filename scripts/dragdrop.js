@@ -21,6 +21,16 @@ let rocketDropHandler = event => {
   commentInput.value = data[currentChoice + '_reason'];
   let commentElement = document.querySelector('.comment');
   commentElement.classList.remove('hide');
+  let numRocketItems = document.querySelectorAll('.rocket .item');
+  console.log(numRocketItems.length);
+  let choiceItems = document.querySelectorAll('.choices .item');
+  if (numRocketItems.length === 3) {
+    console.log('works')
+    for (let choice of choiceItems) {
+      choice.setAttribute('draggable', 'false');
+      console.log(choice);
+    }
+  }
 }
 // choices drop handler
 let choicesDropHandler = event => {
