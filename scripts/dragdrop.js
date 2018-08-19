@@ -16,6 +16,9 @@ let rocketDropHandler = event => {
 // choices drop handler
 let choicesDropHandler = event => {
   console.log('dropped in choices');
+  let dragId = event.dataTransfer.getData("dragElement");
+  let dragElement = document.querySelector('#' + dragId);
+  event.target.appendChild(dragElement);
 }
 let dragOff = event => {
   event.preventDefault();
