@@ -2,6 +2,7 @@ let currentChoice = '';
 let items = document.querySelectorAll('.item');
 for (let item of items){
   item.ondragstart = event => {
+    event.preventDefault();
     console.log('selected ' + event.target.id);
     event.dataTransfer.setData("dragElement", event.currentTarget.id);
     event.effectAllowed = "copyMove";
@@ -9,6 +10,7 @@ for (let item of items){
 }
 // rocket drop handler
 let rocketDropHandler = event => {
+  event.preventDefault();
   console.log('dropped in rocket');
   let dragId = event.dataTransfer.getData("dragElement");
   let dragElement = document.querySelector('#' + dragId);
@@ -34,6 +36,7 @@ let rocketDropHandler = event => {
 }
 // choices drop handler
 let choicesDropHandler = event => {
+  event.preventDefault();
   console.log('dropped in choices');
   let dragId = event.dataTransfer.getData("dragElement");
   let dragElement = document.querySelector('#' + dragId);
