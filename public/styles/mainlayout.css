@@ -5,8 +5,8 @@ body {
     padding: 0;
     background: rgb(16,44,166);
     background: radial-gradient(circle, rgba(16,44,166,1) 0%, rgba(77,5,119,1) 100%);
+    overflow: hidden;
 }
-
 .mainColumnFlex {
     display: flex;
     flex-direction: column;
@@ -66,8 +66,6 @@ body {
 .fifthPrompt {
     animation: fadeaway 20s 16s linear infinite;
 }
-
-
 @keyframes fadeaway {
     0% {
         opacity: 1;
@@ -82,7 +80,6 @@ body {
         opacity: 0;
     }
 }
-
 .icons {
     height: 2em;
     margin: .5em;
