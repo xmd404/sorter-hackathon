@@ -29,19 +29,13 @@ body {
     flex-basis: 100%;
 }
 
-.rocketIMG {
-    height: 15em;
-    flex-basis: 100%;
-}
-.robotIMG {
-    height: 15em;
-}
-
 .textBubbleIMG {
-    height: 10em;
+    height: 5em;
     width: 100%;
 }
-
+.title {
+    text-align: center;
+}
 .textbubble {
     height: 10em;
     position: relative;
