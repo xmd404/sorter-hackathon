@@ -26,10 +26,18 @@ function(accessToken, refreshToken, profile, cb) {
   return cb(null, profile);
 }));
 
+passport.serializeUser(function(user, cb) {
+  cb(null, user);
+});
+
+passport.deserializeUser(function(obj, cb) {
+  cb(null, obj);
+});
+
 // Initialize Passport and restore authentication state, if any, from the
-// session.
+// // session.
 app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.session());
 
 app.use(express.static('public'));
 
@@ -39,7 +47,7 @@ app.get('/login',
 app.get('/login/return', 
   passport.authenticate('facebook', { failureRedirect: '/login' }),
   (req, res) => {
-    res.redirect('/');
+    res.send({ user: req.user });
   });
 
 app.listen(PORT);
