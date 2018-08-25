@@ -1,0 +1,23 @@
+{
+  "name": "noahs-ark-3000",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theWebsiteKid/sorter-hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theWebsiteKid/sorter-hackathon/issues"
+  },
+  "homepage": "https://github.com/theWebsiteKid/sorter-hackathon#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "pg-promise": "^8.4.6"
+  }
+}
