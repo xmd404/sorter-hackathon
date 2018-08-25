@@ -1,5 +1,4 @@
-const env = require('dotenv').config();
-const user = require('./user');  // Create a user.js file in this directory with your username to test database.
+require('dotenv').config();  // Create a .env file, fill in missing values from .env.default
 const express = require('express');
 const bodyParser = require('body-parser');
 const passport = require('passport');
@@ -7,7 +6,7 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 
 const app = express();
 const pg = require('pg-promise')();
-const dbConfig = 'postgres://' + user + '@localhost:5432/';
+const dbConfig = 'postgres://' + process.env.USER + '@localhost:5432/';
 const db = pg(dbConfig);
 const PORT = process.env.PORT || 3000; // Get port from environment
 
