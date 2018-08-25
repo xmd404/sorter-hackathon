@@ -7,7 +7,7 @@ for (let item of items){
     event.dataTransfer.setData("dragElement", event.currentTarget.id);
     event.effectAllowed = "copyMove";
   }
-}
+};
 // rocket drop handler
 let rocketDropHandler = event => {
   event.preventDefault();
@@ -33,7 +33,7 @@ let rocketDropHandler = event => {
       console.log(choice);
     }
   }
-}
+};
 // choices drop handler
 let choicesDropHandler = event => {
   event.preventDefault();
@@ -43,10 +43,10 @@ let choicesDropHandler = event => {
   event.currentTarget.appendChild(dragElement);
   let choice = dragId.replace('-choice', '');
   data[choice] = false;
-}
+};
 let dragOff = event => {
   event.preventDefault();
-}
+};
 let rocket = document.querySelector('.rocket');
 let choices = document.querySelector('.choices');
 rocket.ondrop = rocketDropHandler;
